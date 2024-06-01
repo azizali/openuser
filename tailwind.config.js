@@ -63,7 +63,6 @@ module.exports = {
     // You can add another theme among the list of 30+
     // Add "data-theme='theme_name" to any HTML tag to enable the 'theme_name' theme.
     // https://daisyui.com/
-    zthemes: ['light', "dark"],
     themes: [{
       light: {
         primary: "#121212",
@@ -73,7 +72,6 @@ module.exports = {
         neutral: "#000",
         "base-100": "#FFF",
       },
-    }
-  ],
+    }],
   },
 };

@@ -27,7 +27,7 @@ progress::-webkit-progress-value {
   leading-4
   py-2
   min-h-8
-  h-8
+  h-auto
   rounded-md
   !normal-case
   font-medium
@@ -39,8 +39,12 @@ progress::-webkit-progress-value {
 }
 
 .btn-lg {
-  @apply min-h-12
-  h-12;
+  @apply min-h-11
+  h-auto
+  px-6
+  text-lg
+  leading-6
+  font-medium;
 }
 
 .btn-primary {
