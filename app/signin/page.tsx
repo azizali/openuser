@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
+import config from "@/config";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Provider } from "@supabase/supabase-js";
+import Link from "next/link";
+import { useState } from "react";
 import toast from "react-hot-toast";
-import config from "@/config";
 
 // This a login/singup page for Supabase Auth.
 // Successfull login redirects to /api/auth/callback where the Code Exchange is processed (see app/api/auth/callback/route.js).
@@ -64,7 +64,7 @@ export default function Login() {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="w-5 h-5"
+            className="w-4 h-4"
           >
             <path
               fillRule="evenodd"
@@ -92,7 +92,7 @@ export default function Login() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
+              className="w-4 h-4"
               viewBox="0 0 48 48"
             >
               <path
