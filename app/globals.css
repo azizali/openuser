@@ -89,3 +89,10 @@ progress::-webkit-progress-value {
   @apply bg-base-300/40
   text-base-content;
 }
+
+.heading-1 {
+  @apply text-3xl sm:text-4xl font-extrabold text-base-content tracking-tight;
+}
+.heading-2 {
+  @apply text-2xl sm:text-3xl font-extrabold text-base-content tracking-tight;
+}

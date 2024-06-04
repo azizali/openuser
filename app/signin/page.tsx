@@ -1,9 +1,9 @@
 "use client";
 
+import Logo from "@/components/Logo";
 import config from "@/config";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Provider } from "@supabase/supabase-js";
-import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -58,29 +58,10 @@ export default function Login() {
 
   return (
     <main className="p-8 md:p-24" data-theme={config.colors.theme}>
-      <div className="text-center mb-4">
-        <Link href="/" className="btn btn-ghost btn-sm">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-4"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-            />
-          </svg>
-          Home
-        </Link>
+      <div className="flex flex-col gap-4 items-center mb-6">
+        <Logo isIconOnly={true} />
+        <h1 className="heading-2 text-center">Sign-in to {config.appName} </h1>
       </div>
-      <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-12">
-        Sign-in to {config.appName}{" "}
-      </h1>
-
       <div className="space-y-8 max-w-xl mx-auto">
         <button
           className="btn btn-block"

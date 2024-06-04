@@ -1,10 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
 import type { JSX } from "react";
+import { useRef, useState } from "react";
 
 // <FAQ> component is a lsit of <Item> component
-// Just import the FAQ & add your FAQ content to the const faqList arrayy below.
 
 interface FAQItemProps {
   question: string;
@@ -13,22 +12,59 @@ interface FAQItemProps {
 
 const faqList: FAQItemProps[] = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
-  },
-  {
-    question: "Can I get a refund?",
+    question: "What is OpenUser?",
     answer: (
-      <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
-      </p>
+      <div className="space-y-2 leading-relaxed">
+        <p>
+          OpenUser is a platorm for you to share different aspects of your life
+          in an organized way. You can share, for instance, the books you read
+          for leisure, the tools you use for your craft, or even share your
+          productivity routine that keeps your going.
+        </p>
+        <p>Breakdown your OpenUser profile in different sections such as:</p>
+        <ul className="list-disc list-outside pl-5">
+          <li>
+            <strong>Health & Fitness</strong>: Share your workout routine,
+            equipment, fitness tracker, or your favorite cheat meal.
+          </li>
+          <li>
+            <strong>Books</strong>: Talk us about the books your have read and
+            which ones made the most impact on your life.
+          </li>
+          <li>
+            <strong>Finances</strong>: How do you buget, where do you spend and
+            invest. Do not forget to tell us the apps, tools and services you
+            use to manage your finances.
+          </li>
+        </ul>
+        <p>These are just ideas on what you can share.</p>
+        <p>
+          If you are a specialist such as a Software Engineer, Interior
+          Designer, Structural Architect, Gamer, Farmer, Actor, Entreprenur,
+          Investor, Writer, Marketer, etc, create custom sections in your
+          OpenUser profile to share your world.
+        </p>
+      </div>
     ),
   },
   {
-    question: "I have another question",
+    question: "Is OpenUser really free?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">
+        Yes! OpenUser was created to enable you to open up certain aspects of
+        your life with the world. To afford this ability to the maximum amount
+        of people, OpenUser is free to get started. Additional features will be
+        available in the <span className="underline">OpenUser Pro</span> plan.
+      </div>
+    ),
+  },
+  {
+    question: "Who is behind OpenUser",
+    answer: (
+      <p>
+        OpenUser is created by @azizali. BTW Aziz Ali is an OpenUser himself.
+        Click here to checkout his profile.
+      </p>
     ),
   },
 ];
@@ -38,9 +74,9 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <li>
+    <li className="bg-white rounded-xl p-7 border border-base-content/10 hover:border-base-content/30 ">
       <button
-        className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+        className="relative flex gap-2 bg-white items-center rounded-xl w-full text-base font-semibold text-left"
         onClick={(e) => {
           e.preventDefault();
           setIsOpen(!isOpen);
@@ -80,14 +116,14 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
 
       <div
         ref={accordion}
-        className={`transition-all duration-300 ease-in-out opacity-80 overflow-hidden`}
+        className="transition-all duration-300 ease-in-out opacity-80 overflow-hidden"
         style={
           isOpen
             ? { maxHeight: accordion?.current?.scrollHeight, opacity: 1 }
             : { maxHeight: 0, opacity: 0 }
         }
       >
-        <div className="pb-5 leading-relaxed">{item?.answer}</div>
+        <div className="mt-7 leading-relaxed">{item?.answer}</div>
       </div>
     </li>
   );
@@ -95,16 +131,10 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-base-200" id="faq">
-      <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
-        <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            Frequently Asked Questions
-          </p>
-        </div>
-
-        <ul className="basis-1/2">
+    <section className="bg-[#f9f9f9]" id="faq">
+      <div className="max-w-5xl mx-auto py-24 px-8 flex flex-col gap-8">
+        <p className="heading-2">Questions and Answers</p>
+        <ul className="basis-1/2  gap-4 flex flex-col">
           {faqList.map((item, i) => (
             <FaqItem key={i} item={item} />
           ))}

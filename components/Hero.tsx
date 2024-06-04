@@ -17,7 +17,8 @@ const Hero = () => {
             Become an {config.appName}
           </button>
           <div className="text-sm text-base-content/80">
-            12,578 people became OpenUser yesterday
+            ⚡ <span className="xunderline">12,578</span> people became OpenUser
+            yesterday
           </div>
         </div>
       </div>
