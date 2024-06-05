@@ -59,7 +59,7 @@ export default function Login() {
   return (
     <main className="p-8 md:p-24" data-theme={config.colors.theme}>
       <div className="flex flex-col gap-4 items-center mb-6">
-        <Logo isIconOnly={true} />
+        <Logo isIconOnly={true} size="lg" />
         <h1 className="heading-2 text-center">Sign-in to {config.appName} </h1>
       </div>
       <div className="space-y-8 max-w-xl mx-auto">

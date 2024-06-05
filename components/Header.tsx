@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import type { JSX } from "react";
 import { useEffect, useState } from "react";
 import ButtonSignin from "./ButtonSignin";
+import Logo from "./Logo";
 
 const links: {
   href: string;
@@ -48,18 +49,7 @@ const Header = () => {
       >
         {/* Your logo/name on large screens */}
         <div className="flex">
-          <Link
-            className="flex items-center gap-2 shrink-0 "
-            href="/"
-            title={`${config.appName} homepage`}
-          >
-            <Image
-              src={logo}
-              alt={`${config.appName} logo`}
-              className="w-[100px]"
-              priority={true}
-            />
-          </Link>
+          <Logo />
         </div>
         {/* Burger button to open menu on mobile */}
         <div className="flex lg:hidden">
