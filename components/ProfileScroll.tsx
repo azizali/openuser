@@ -1,9 +1,15 @@
-const ProfileCard = ({ imgSrc, name }) => {
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
+type PropTypes = {
+  imgSrc: string | StaticImport;
+  name: string;
+};
+const ProfileCard = ({ imgSrc, name }: PropTypes) => {
   return (
     <div className="border-2 bg-base-300 p-4 rounded-2xl !w-[220px] shrink-0">
       <div className="flex gap-4">
         <div className="flex gap-2">
-          <img src={imgSrc} className="rounded-full w-12 h-12" />
+          <Image src={imgSrc} className="rounded-full w-12 h-12" alt={name} />
           <div className="flex flex-col gap-2 overflow-hidden">
             <p className="font-bold truncatex group-hover:underline duration-200 truncate">
               {name}

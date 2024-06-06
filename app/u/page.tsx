@@ -1,6 +1,8 @@
 import BuiltWithBadge from "@/components/BuiltWithBadge";
 import Logo from "@/components/Logo";
 import SubScribeMe from "@/components/SubscribeMe";
+import Image from "next/image";
+
 export const dynamic = "force-dynamic";
 
 const menuOptions = [
@@ -20,9 +22,9 @@ const menuOptions = [
   {
     label: "What's New",
     iconSVG: (
-      <span class="relative flex size-4 justify-center items-center">
-        <span class="animate-ping absolute inline-flex size-3 rounded-full bg-sky-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full size-3 bg-green-500"></span>
+      <span className="relative flex size-4 justify-center items-center">
+        <span className="animate-ping absolute inline-flex size-3 rounded-full bg-sky-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full size-3 bg-green-500"></span>
       </span>
     ),
   },
@@ -285,7 +287,8 @@ export default async function Profile() {
         <div className=" max-w-4xl min-h-screen px-24 py-12 pb-24">
           <div className="flex flex-col gap-6">
             <div className="flex gap-7 items-center">
-              <img
+              <Image
+                alt="Profile Picture - TODO change with user name"
                 className="rounded-full w-36 h-36"
                 src={`https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=148&h=148`}
               />

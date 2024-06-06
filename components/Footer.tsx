@@ -46,7 +46,8 @@ const Footer = () => {
                   target="_blank"
                   className="text-base-content/70 link link-hover"
                 >
-                  What's new<sup>✧</sup>
+                  {` What's new`}
+                  <sup>✧</sup>
                 </a>
               </div>
             </div>

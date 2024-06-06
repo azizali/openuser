@@ -1,7 +1,7 @@
 const SubScribeMe = () => {
   return (
     <div className="xp-4 xborder xrounded flex flex-col gap-4">
-      👇 2M+ people are subscribers to Aziz's newsletter
+      👇 2M+ people are subscribers to {`Aziz's`} newsletter
       <div className="flex items-center">
         <input
           type="text"
