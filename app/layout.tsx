@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
-import { Inter } from "next/font/google";
-import { Viewport } from "next";
-import PlausibleProvider from "next-plausible";
-import { getSEOTags } from "@/libs/seo";
 import ClientLayout from "@/components/LayoutClient";
 import config from "@/config";
+import { getSEOTags } from "@/libs/seo";
+import { Viewport } from "next";
+import PlausibleProvider from "next-plausible";
+import { Inter } from "next/font/google";
+import { ReactNode } from "react";
 import "./globals.css";
 
 const font = Inter({ subsets: ["latin"] });
@@ -25,6 +25,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" data-theme={config.colors.theme} className={font.className}>
       {config.domainName && (
         <head>
+          <script
+            defer
+            type="text/javascript"
+            src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          />
           <PlausibleProvider domain={config.domainName} />
         </head>
       )}

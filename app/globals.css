@@ -96,3 +96,21 @@ progress::-webkit-progress-value {
 .heading-2 {
   @apply text-2xl sm:text-3xl font-extrabold text-base-content tracking-tight;
 }
+
+input {
+  @apply rounded-sm
+  p-1;
+}
+
+input[type="text"],
+input[type="email"] {
+  @apply border;
+}
+input[type="submit"],
+input[type="button"] {
+  @apply btn;
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
