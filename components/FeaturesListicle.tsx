@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import type { JSX } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // List of features to display:
 // - name: name of the feature
@@ -451,7 +451,7 @@ const FeaturesListicle = () => {
           <div className="text-base-content/80 leading-relaxed mb-8 lg:text-lg">
             {/* 💡 COPY TIP: Explain how your product delivers what you promise in the headline. */}
             Login users, process payments and send emails at lightspeed. Spend
-            your time building your startup, not integrating APIs. ShipFast
+            your time building your startup, not integrating APIs. OpenUser
             provides you with the boilerplate code you need to launch, FAST.
           </div>
         </div>

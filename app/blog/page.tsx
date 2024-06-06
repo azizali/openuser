@@ -1,8 +1,8 @@
-import { categories, articles } from "./_assets/content";
-import CardArticle from "./_assets/components/CardArticle";
-import CardCategory from "./_assets/components/CardCategory";
 import config from "@/config";
 import { getSEOTags } from "@/libs/seo";
+import CardArticle from "./_assets/components/CardArticle";
+import CardCategory from "./_assets/components/CardCategory";
+import { articles, categories } from "./_assets/content";
 
 export const metadata = getSEOTags({
   title: `${config.appName} Blog | Stripe Chargeback Protection`,
@@ -25,8 +25,7 @@ export default async function Blog() {
           The {config.appName} Blog
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          Learn how to ship your startup in days, not weeks. And get the latest
-          updates about the boilerplate
+          Learn how to do x y and z
         </p>
       </section>
 

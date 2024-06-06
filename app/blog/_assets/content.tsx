@@ -1,5 +1,5 @@
-import marcImg from "@/app/blog/_assets/images/authors/marc.png";
-import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
+import azizImg from "@/app/blog/_assets/images/authors/azizali.jpeg";
+import introducingImg from "@/public/blog/introducing/header.avif";
 import Image, { StaticImageData } from "next/image";
 import type { JSX } from "react";
 
@@ -31,8 +31,7 @@ export const categories: categoryType[] = [
     // A short version of the title above, display in small components like badges. 1 or 2 words
     titleShort: "Features",
     // The description of the category to display in the category page. Up to 160 characters.
-    description:
-      "Here are the latest features we've added to OpenUser. I'm constantly improving our product to help you ship faster.",
+    description: "Here are the latest features we've added to OpenUser.",
     // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
     descriptionShort: "Latest features added to OpenUser.",
   },
@@ -40,8 +39,7 @@ export const categories: categoryType[] = [
     slug: categorySlugs.tutorial,
     title: "How Tos & Tutorials",
     titleShort: "Tutorials",
-    description:
-      "Learn how to use OpenUser with these step-by-step tutorials. I'll show you how to ship faster and save time.",
+    description: "Learn how to use OpenUser with these step-by-step tutorials.",
     descriptionShort:
       "Learn how to use OpenUser with these step-by-step tutorials.",
   },
@@ -124,39 +122,39 @@ const socialIcons: {
 const authorSlugs: {
   [key: string]: string;
 } = {
-  marc: "marc",
+  aziz: "aziz",
 };
 
 // All the blog authors data display in the /blog/author/[authorId].js pages.
 export const authors: authorType[] = [
   {
     // The slug to use in the URL, from the authorSlugs object above.
-    slug: authorSlugs.marc,
+    slug: authorSlugs.aziz,
     // The name to display in the author's bio. Up to 60 characters.
-    name: "Marc Lou",
+    name: "Aziz Ali",
     // The job to display in the author's bio. Up to 60 characters.
-    job: "Maker of ByeDispute",
+    job: "Creator of OpenUser",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Marc is a developer and an entrepreneur. He's built 20 startups in the last 3 years. 6 were profitable and 3 were acquired. He's currently building ByeDispute, the #1 Stripe Chargebacks Protection tool.",
+      "Aziz Ali is 7x serial-entrepreneur, software engineer and minimalist based out of Chicago, IL. Currently Aziz is working on OpenUser.com",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
-    avatar: marcImg,
+    avatar: azizImg,
     // A list of social links to display in the author's bio.
     socials: [
       {
         name: socialIcons.twitter.name,
         icon: socialIcons.twitter.svg,
-        url: "https://twitter.com/marc_louvion",
+        url: "https://twitter.com/heyaziz",
       },
       {
         name: socialIcons.linkedin.name,
         icon: socialIcons.linkedin.svg,
-        url: "https://www.linkedin.com/in/marclouvion/",
+        url: "https://www.linkedin.com/in/azizali/",
       },
       {
         name: socialIcons.github.name,
         icon: socialIcons.github.svg,
-        url: "https://github.com/Marc-Lou-Org/ship-fast",
+        url: "https://github.com/azizali",
       },
     ],
   },
@@ -200,33 +198,33 @@ const styles: {
 export const articles: articleType[] = [
   {
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
-    slug: "introducing-supabase",
+    slug: "introducing-open-user",
     // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
-    title: "Introducing Supabase to ShipFast",
+    title: "Introducing OpenUser",
     // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
     description:
-      "Supabase is an open-source Firebase alternative. It's a great tool for building a backend for your app. It's now integrated with ShipFast!",
+      "OpenUser is a place where people can express themselves fully by sharing what products they use, what they do and how they do it.",
     // An array of categories of the article. It's used to generate the category badges, the category filter, and more.
     categories: [
       categories.find((category) => category.slug === categorySlugs.feature),
     ],
     // The author of the article. It's used to generate a link to the author's bio page.
-    author: authors.find((author) => author.slug === authorSlugs.marc),
+    author: authors.find((author) => author.slug === authorSlugs.aziz),
     // The date of the article. It's used to generate the meta date.
-    publishedAt: "2023-11-20",
+    publishedAt: "2024-06-06",
     image: {
       // The image to display in <CardArticle /> components.
-      src: introducingSupabaseImg,
+      src: introducingImg,
       // The relative URL of the same image to use in the Open Graph meta tags & the Schema Markup JSON-LD. It should be the same image as the src above.
-      urlRelative: "/blog/introducing-supabase/header.jpg",
-      alt: "Supabase and ShipFast logo combined",
+      urlRelative: "/blog/introducing/header.jpg",
+      alt: "plant in pot",
     },
     // The actual content of the article that will be shown under the <h1> title in the article page.
     content: (
       <>
         <Image
-          src={introducingSupabaseImg}
-          alt="Supabase and ShipFast logo combined"
+          src={introducingImg}
+          alt="banner"
           width={700}
           height={500}
           priority={true}
@@ -235,11 +233,7 @@ export const articles: articleType[] = [
         />
         <section>
           <h2 className={styles.h2}>Introduction</h2>
-          <p className={styles.p}>
-            Supabase is an open-source Firebase alternative. It&apos;s a great
-            tool for building a backend for your app. It&apos;s now integrated
-            with ShipFast!
-          </p>
+          <p className={styles.p}>x</p>
         </section>
 
         <section>
@@ -271,11 +265,11 @@ export const articles: articleType[] = [
         </section>
 
         <section>
-          <h3 className={styles.h3}>2. Add your credentials to ShipFast</h3>
+          <h3 className={styles.h3}>2. Add your credentials to OpenUser</h3>
           <p className={styles.p}>
             Copy the <span className={styles.codeInline}>API URL</span> and{" "}
             <span className={styles.codeInline}>API Key</span> from your
-            Supabase project settings and add them to your ShipFast project
+            Supabase project settings and add them to your OpenUser project
             settings. Add these files to your project:
           </p>
 

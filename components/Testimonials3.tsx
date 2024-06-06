@@ -1,6 +1,5 @@
-import Image from "next/image";
-import { StaticImageData } from "next/image";
 import config from "@/config";
+import Image, { StaticImageData } from "next/image";
 
 // The list of your testimonials. It needs 3 items to fill the row.
 const list: {
@@ -92,7 +91,7 @@ const Testimonials3 = () => {
           </div>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-base-content/80">
             Don&apos;t take our word for it. Here&apos;s what they have to say
-            about ShipFast.
+            about OpenUser.
           </p>
         </div>
 

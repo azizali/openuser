@@ -1,9 +1,9 @@
-import { NextResponse, NextRequest } from "next/server";
-import { headers } from "next/headers";
-import Stripe from "stripe";
-import { SupabaseClient } from "@supabase/supabase-js";
 import configFile from "@/config";
 import { findCheckoutSession } from "@/libs/stripe";
+import { SupabaseClient } from "@supabase/supabase-js";
+import { headers } from "next/headers";
+import { NextRequest, NextResponse } from "next/server";
+import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2023-08-16",
@@ -14,7 +14,6 @@ const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 // This is where we receive Stripe webhook events
 // It used to update the user data, send emails, etc...
 // By default, it'll store the user in the database
-// See more: https://shipfa.st/docs/features/payments
 export async function POST(req: NextRequest) {
   const body = await req.text();
 

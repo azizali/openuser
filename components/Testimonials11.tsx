@@ -1,9 +1,8 @@
 "use client";
 
-import { JSX, useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import { StaticImageData } from "next/image";
 import config from "@/config";
+import Image, { StaticImageData } from "next/image";
+import { JSX, useEffect, useRef, useState } from "react";
 
 // Use this object to add an icon to the testimonial (optional) like the Product Hunt logo for instance.
 // Only change the values if you add more referrings sites (currently Twitter & Product Hunt)
@@ -104,7 +103,7 @@ const list: {
     name: "Wahab Shaikh",
     text: "Easily saves 15+ hrs for me setting up trivial stuff. Now, I can directly focus on shipping features rather than hours of setting up the same technologies from scratch. Feels like a super power! :D",
     type: refTypes.productHunt,
-    link: "https://www.producthunt.com/products/shipfast-2/reviews?review=667971",
+    link: "https://www.producthunt.com/products/openuser-2/reviews?review=667971",
   },
   {
     name: "Sean",
@@ -116,7 +115,7 @@ const list: {
     name: "Krishna Kant",
     text: "Finally a good boilerplate for Nextjs, now I dont have to cry about it comparing with laravel ecosystem.",
     type: refTypes.productHunt,
-    link: "https://www.producthunt.com/posts/shipfast-2?comment=2707061",
+    link: "https://www.producthunt.com/posts/openuser-2?comment=2707061",
   },
   {
     username: "imgyf",
@@ -150,7 +149,7 @@ const list: {
     name: "Dan Mindru",
     text: "Probably one of the most powerful things you can 'npm install' that I've seen",
     type: refTypes.productHunt,
-    link: "https://www.producthunt.com/posts/shipfast-2?comment=2706763",
+    link: "https://www.producthunt.com/posts/openuser-2?comment=2706763",
   },
   // The last testimonial is featured on big devices (span 2 columns + big font) 👇
   {
