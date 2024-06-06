@@ -1,9 +1,11 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+
 type PropTypes = {
   imgSrc: string | StaticImport;
   name: string;
 };
+
 const ProfileCard = ({ imgSrc, name }: PropTypes) => {
   return (
     <div className="border-2 bg-base-300 p-4 rounded-2xl !w-[220px] shrink-0">
